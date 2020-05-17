@@ -9,6 +9,6 @@ public class HomeController {
     @GetMapping(value = "/")
     public String home() {
 
-        return "findCar";
+        return "start";
     }
 }

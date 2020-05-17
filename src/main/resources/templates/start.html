@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="../static/css/font-awesome.min.css"
+          th:href="@{/css/font-awesome.min.css}">
+    <link rel="stylesheet"
+          href="../static/css/bootstrap.css"
+          th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet"
+          href="../static/css/style.css"
+          th:href="@{/css/style.css}">
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+    <title>Start page</title>
+    <style>
+        body {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Encryption</h5>
+                <input class="form-control" type="text" placeholder="Default input">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">encrypt</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Decryption</h5>
+                <input class="form-control" type="text" placeholder="Default input">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">decrypt</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <input class="form-control" type="text" placeholder="Readonly input here..." readonly>
+</div>
+</body>
+</html>
