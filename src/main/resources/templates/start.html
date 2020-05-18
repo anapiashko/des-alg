@@ -29,7 +29,14 @@
         <div class="card-body">
             <h5 class="card-title">Encryption</h5>
             <form th:action="@{/encryption}" method="post">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend"><div class="input-group-text">Text</div></div>
                 <input class="form-control" type="text" th:value="${sourceText}" name="sourceText"/>
+                </div>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend"><div class="input-group-text">Key</div></div>
+                <input class="form-control" type="text" th:value="${key}" name="key"/>
+                </div>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <div class="row">
                     <input class="btn btn-primary" type="submit" value="encrypt" style="margin-right: 50px"/>
@@ -39,10 +46,15 @@
         </div>
     </div>
 
-    <!--<form th:action="@{/process}"  method="post">-->
-    <!--    <input type="text" th:value="${sourceText}" name="sourceText"/>-->
-    <!--    <input type="submit" />-->
-    <!--</form>-->
+<!--    <form th:action="@{/encryption}"  method="post">-->
+<!--        <div class="input-group mb-2">-->
+<!--        <div class="input-group-prepend">-->
+<!--            <div class="input-group-text">text</div>-->
+<!--        </div>-->
+<!--        <input type="text" th:value="${sourceText}" name="sourceText"/>-->
+<!--        </div>-->
+<!--        <input type="submit" />-->
+<!--    </form>-->
     <div class="text-nowrap">
         <h4>Result</h4>
     </div>
