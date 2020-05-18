@@ -26,18 +26,23 @@
 <div class="container-fluid " style="align-self: center;max-width: 60rem">
 
     <div class="card border-info mb-3">
+        <div class="card-header bg-transparent border-info" ><h5 style="text-align: center">DES encryption algorithm</h5></div>
         <div class="card-body">
-            <h5 class="card-title">Encryption</h5>
+            <h6 class="card-title">Encryption/Decryption</h6>
             <form th:action="@{/encryption}" method="post">
                 <div class="input-group mb-2">
-                    <div class="input-group-prepend"><div class="input-group-text">Text</div></div>
-                <input class="form-control" type="text" th:value="${sourceText}" name="sourceText"/>
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Text</div>
+                    </div>
+                    <input class="form-control" type="text" th:value="${sourceText}" name="sourceText"/>
                 </div>
                 <div class="input-group mb-2">
-                    <div class="input-group-prepend"><div class="input-group-text">Key</div></div>
-                <input class="form-control" type="text" th:value="${key}" name="key"/>
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Key</div>
+                    </div>
+                    <input class="form-control" type="text" th:value="${key}" name="key"/>
                 </div>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">Enter plain or encrypted text in the 'Text' field. You will see the result below</p>
                 <div class="row">
                     <input class="btn btn-primary" type="submit" value="encrypt" style="margin-right: 50px"/>
                     <input class="btn btn-primary" th:formaction="@{/decryption}" type="submit" value="decrypt"/>
@@ -46,25 +51,25 @@
         </div>
     </div>
 
-<!--    <form th:action="@{/encryption}"  method="post">-->
-<!--        <div class="input-group mb-2">-->
-<!--        <div class="input-group-prepend">-->
-<!--            <div class="input-group-text">text</div>-->
-<!--        </div>-->
-<!--        <input type="text" th:value="${sourceText}" name="sourceText"/>-->
-<!--        </div>-->
-<!--        <input type="submit" />-->
-<!--    </form>-->
+    <!--    <form th:action="@{/encryption}"  method="post">-->
+    <!--        <div class="input-group mb-2">-->
+    <!--        <div class="input-group-prepend">-->
+    <!--            <div class="input-group-text">text</div>-->
+    <!--        </div>-->
+    <!--        <input type="text" th:value="${sourceText}" name="sourceText"/>-->
+    <!--        </div>-->
+    <!--        <input type="submit" />-->
+    <!--    </form>-->
     <div class="text-nowrap">
         <h4>Result</h4>
     </div>
-    <!--<span th:text="${text}"></span>-->
-    <nav class="navbar navbar-light bg-light">
+    <div class="card border-primary mb-3">
+        <nav class="navbar navbar-light bg-light">
   <span class="navbar-text" th:text="${text}">
-    Navbar text with an inline element
-  </span>
-    </nav>
 
+  </span>
+        </nav>
+    </div>
 </div>
 
 
