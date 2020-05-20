@@ -1,7 +1,6 @@
 package com.example.demo.controllers;
 
 import com.example.demo.services.DES;
-import com.example.demo.services.DESImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 
-    private DES desAlgorithm = new DESImpl();
+    private final DES desAlgorithm;
+
+    public HomeController(DES desAlgorithm) {
+        this.desAlgorithm = desAlgorithm;
+    }
 
     @GetMapping(value = "/")
     public String home() {

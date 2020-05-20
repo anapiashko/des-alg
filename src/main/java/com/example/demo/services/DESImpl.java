@@ -1,8 +1,11 @@
 package com.example.demo.services;
 
+import org.springframework.stereotype.Service;
+
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 
+@Service
 public class DESImpl implements DES {
 
     public static int KEY_LENGTH = 64;
